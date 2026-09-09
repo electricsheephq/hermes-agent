@@ -8402,8 +8402,9 @@ async function saveGatewayFile(payload: GatewayFileSavePayload = {}) {
     ensureRegistry: ensureRegistryBackend
   })
 
-  const requestPaths = gatewayFileRequestPaths(filePath, requestPath =>
-    gatewayFileRequestPath(connection, connectionId, routedProfile, requestPath),
+  const requestPaths = gatewayFileRequestPaths(
+    filePath,
+    requestPath => gatewayFileRequestPath(connection, connectionId, routedProfile, requestPath),
     payload.sessionId
   )
 
